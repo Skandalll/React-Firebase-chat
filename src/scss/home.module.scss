@@ -1,0 +1,229 @@
+.root {
+  background:url("https://phonoteka.org/uploads/posts/2022-01/1642641322_40-phonoteka-org-p-minimalistichnii-fon-40.jpg") no-repeat center center/cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chatsWrapper{
+  
+}
+.container {
+  border: 1px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 65%;
+  height: 80%;
+  display: flex;
+}
+.userChat {
+  .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    p {
+      font-size: 10px;
+    }
+  }
+  :hover {
+    color: white;
+  }
+  cursor: pointer;
+  background-color: #eeb389;
+
+  display: flex;
+  align-items: center;
+  border-top: 1px black solid;
+  border-bottom: 1px black solid;
+  gap: 10px;
+
+  img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
+}
+.searchForm {
+  margin-bottom: 20px;
+  margin-top: 10px;
+  img {
+    width: 20px;
+    margin-right: 5px;
+  }
+  :active,
+  :hover,
+  :focus {
+    outline: 0;
+    outline-offset: 0;
+  }
+  display: flex;
+  justify-content: center;
+  background-color: #bc987e;
+  input {
+    border: none;
+    border-bottom: 1px solid black;
+    width: 80%;
+    background-color: #bc987e;
+    ::placeholder {
+      color: white;
+    }
+  }
+}
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  &__name {
+  }
+  &__icon {
+    width: 20px;
+    height: 20px;
+    background-color: #bc987e;
+    border-radius: 50%;
+    border: none;
+    object-fit: cover;
+  }
+  &__logout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #bc987e;
+    border: none;
+    border-radius: 10%;
+    padding: 5px;
+  }
+}
+:global(.chat) {
+}
+:global(.navbar) {
+  display: flex;
+  align-items: center;
+  background-color: #e5c08f;
+  height: 50px;
+  justify-content: space-between;
+  padding: 5px;
+  color: black;
+}
+:global(.sidebar) {
+  border-right: 1px solid black;
+  background-color: #bc987e;
+
+  width: 250px;
+}
+.chat {
+  background-color: antiquewhite;
+  width: 100%;
+}
+.chatInfo {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  p {
+    margin-right: 60%;
+  }
+  img {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+  }
+  color: black;
+  height: 50px;
+  background-color: #e5c08f;
+}
+.messages {
+  padding: 10px;
+  height: calc(100% - 120px);
+  overflow-y: scroll;
+}
+::-webkit-scrollbar-thumb {
+  background: antiquewhite;
+  border-radius: 20px;
+  border: 3px solid #bc987e;
+}
+::-webkit-scrollbar {
+  background-color: #bc987e;
+  width: 20px;
+}
+.messageInput {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  height: 70px;
+  img {
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+  }
+  input {
+    width: 60%;
+    height: 50px;
+    padding: 10px;
+    border: none;
+  }
+}
+.iconsWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.buttonSend {
+  border: none;
+  background-color: white;
+  width: 70px;
+  height: 40px;
+  cursor: pointer;
+}
+.startPage{
+  padding: 50px;
+  text-align: center;
+  height: calc(100% - 120px);
+  img{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 200px;
+  }
+}
+.message {
+  flex-direction: row-reverse;
+  display: flex;
+  padding: 2px;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: white;
+  width: 60%;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 40%;
+  gap: 20px;
+  img {
+    border-radius: 20px;
+    width: 30px;
+    height: 30px;
+  }
+}
+.messageOwner {
+  display: flex;
+  padding: 2px;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: #bc987e;
+  color: white;
+  width: 60%;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  img {
+    border-radius: 20px;
+    width: 30px;
+    height: 30px;
+  }
+}
