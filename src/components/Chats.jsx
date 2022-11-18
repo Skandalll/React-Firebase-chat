@@ -25,7 +25,7 @@ const Chats = ({ styles }) => {
         dispatch({type:"CHANGE_USER",payload:user})
     }
     return (
-    <div className="yahuesos">
+    <div className={styles.chatsWrapper}>
         {Object.entries(chats)?.map((chat) => (
             <div
                 onClick={()=>handleSelect(chat[1].userInfo)}

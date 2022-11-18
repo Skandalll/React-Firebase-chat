@@ -5,6 +5,7 @@ import {AuthContext} from "../context/AuthContext";
 import { doc, updateDoc ,arrayUnion} from "firebase/firestore";
 import {db} from "../firebase";
 import {v4 as uuid} from "uuid"
+import send from "../img/send.svg"
 
 const MessageInput = ({styles}) => {
     const [text,setText] = useState("");
@@ -33,7 +34,7 @@ const MessageInput = ({styles}) => {
             }}   value={text} placeholder="Введите сообщение..." onChange={(e)=>{setText(e.target.value)}} type="text"/>
             <div className={styles.iconsWrapper}>
                 <button onClick={handleSent} className={styles.buttonSend}>
-                    <img src="https://cdn-icons-png.flaticon.com/512/876/876777.png" alt=""/>
+                    <img src={send} alt=""/>
                 </button>
             </div>
         </div>

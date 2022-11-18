@@ -76,7 +76,7 @@ const Search = ({ styles }) => {
           <div className="userChatInfo"></div>
           <div className={styles.text}>
             <span>{user.displayName}</span>
-            <p>Привет.Как дела?</p>
+            <p>Добавь меня в друзья!</p>
           </div>
         </div>
       )}

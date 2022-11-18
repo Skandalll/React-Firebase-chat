@@ -33,7 +33,7 @@ const Login = () => {
             <input type="password" placeholder="Ваш пароль" />
             <button>Войти</button>
             {error ? (
-              <div style={{ color: "red" }}>Такой аккаунт уже существует</div>
+              <div style={{ color: "red" }}>Такого аккаунта не существует</div>
             ) : null}
           </form>
           <p>
