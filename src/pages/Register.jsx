@@ -45,8 +45,8 @@ const Register = () => {
               displayName,
               email,
               photoURL: file
-                  ? downloadURL
-                  : "https://cdn-icons-png.flaticon.com/512/2520/2520879.png"
+                ? downloadURL
+                : "https://cdn-icons-png.flaticon.com/512/2520/2520879.png",
             });
 
             //create empty user chats on firestore
@@ -112,7 +112,10 @@ const Register = () => {
             ></Link>
           </form>
           {error ? (
-            <div style={{ color: "red" }}>Возникла ошибка,возможно такой аккаунт уже существует <br/> ,или пароль меньше 6 символов</div>
+            <div style={{ color: "red" }}>
+              Возникла ошибка,возможно такой аккаунт уже существует <br /> ,или
+              пароль меньше 6 символов
+            </div>
           ) : null}
 
           <p>

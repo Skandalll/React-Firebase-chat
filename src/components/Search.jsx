@@ -1,4 +1,4 @@
-import React, {useContext, useState} from "react";
+import React, { useContext, useState } from "react";
 import {
   collection,
   query,
@@ -10,18 +10,21 @@ import {
   getDoc,
 } from "firebase/firestore";
 import { db } from "../firebase";
-import {AuthContext} from "../context/AuthContext";
+import { AuthContext } from "../context/AuthContext";
 
 const Search = ({ styles }) => {
   const [username, setUsername] = useState("");
   const [user, setUser] = useState(null);
   const [error, setError] = useState(false);
-  const {currentUser} = useContext(AuthContext)
-  const handleSelect = async ()=>{
-    const combinedID = currentUser.uid > user.uid ? currentUser.uid + user.uid: user.uid + currentUser.uid
+  const { currentUser } = useContext(AuthContext);
+  const handleSelect = async () => {
+    const combinedID =
+      currentUser.uid > user.uid
+        ? currentUser.uid + user.uid
+        : user.uid + currentUser.uid;
     try {
-      const res = await getDoc(doc(db,"chats",combinedID))
-      if (!res.exists()){
+      const res = await getDoc(doc(db, "chats", combinedID));
+      if (!res.exists()) {
         await setDoc(doc(db, "chats", combinedID), { messages: [] });
       }
       await updateDoc(doc(db, "userChats", currentUser.uid), {
@@ -29,14 +32,12 @@ const Search = ({ styles }) => {
           uid: user.uid,
           displayName: user.displayName,
           photoURL: user.photoURL,
-        }})
-    }catch (e){
-
-    }
+        },
+      });
+    } catch (e) {}
     setUser(null);
-    setUsername("")
-
-  }
+    setUsername("");
+  };
   const handleSearch = async () => {
     const q = query(
       collection(db, "users"),
@@ -62,7 +63,7 @@ const Search = ({ styles }) => {
           alt=""
         />
         <input
-            value={username}
+          value={username}
           onChange={(e) => setUsername(e.target.value)}
           onKeyDown={handleKey}
           placeholder="Найти пользователя..."

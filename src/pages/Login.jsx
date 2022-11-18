@@ -5,7 +5,6 @@ import { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
 
-
 const Login = () => {
   const navigate = useNavigate();
   const [error, setError] = useState(false);
